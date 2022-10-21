@@ -82,7 +82,7 @@
             // 
             // selectAnswerBtn
             // 
-            this.selectAnswerBtn.Location = new System.Drawing.Point(530, 273);
+            this.selectAnswerBtn.Location = new System.Drawing.Point(518, 293);
             this.selectAnswerBtn.Name = "selectAnswerBtn";
             this.selectAnswerBtn.Size = new System.Drawing.Size(130, 64);
             this.selectAnswerBtn.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             this.nameOfQuestionLbl.AutoSize = true;
             this.nameOfQuestionLbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameOfQuestionLbl.Location = new System.Drawing.Point(370, 38);
+            this.nameOfQuestionLbl.Location = new System.Drawing.Point(370, 60);
             this.nameOfQuestionLbl.Name = "nameOfQuestionLbl";
             this.nameOfQuestionLbl.Size = new System.Drawing.Size(261, 41);
             this.nameOfQuestionLbl.TabIndex = 5;
