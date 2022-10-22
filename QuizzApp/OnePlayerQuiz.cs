@@ -15,10 +15,25 @@ namespace QuizzApp
         public OnePlayerQuiz()
         {
             InitializeComponent();
-            Form1 frm1= new Form1();
         }
 
-        if(frm)
-        
+        public string QuestionLblTxt
+        {
+            get { return this.nameOfQuestionLbl.Text; }
+            set { this.nameOfQuestionLbl.Text = value; }
+        }
+
+        private void OnePlayerQuiz_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void selectAnswerBtn_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

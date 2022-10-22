@@ -43,6 +43,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Single Player";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -85,6 +86,6 @@
 
         private Button button1;
         private Button button2;
-        private ComboBox chosenTopicComboBox;
+        public ComboBox chosenTopicComboBox;
     }
 }

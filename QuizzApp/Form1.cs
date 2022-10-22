@@ -7,6 +7,12 @@ namespace QuizzApp
             InitializeComponent();
         }
 
+        public string ChosenTopic
+        {
+            get { return this.chosenTopicComboBox.Text; }
+            set { this.chosenTopicComboBox.Text = value; }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             chosenTopicComboBox.Items.Insert(0, "Movies");
@@ -17,15 +23,47 @@ namespace QuizzApp
 
         }
 
-        public string ChosenTopic
-        {
-            get { return chosenTopicComboBox.Text; }
-            set { chosenTopicComboBox.Text = value; }
-        }
-
         private void chosenTopicComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Engine.OpenOnePlayerForm();
+
+
+            if (ChosenTopic == "Movies")
+            {
+                Engine.MathsQuiz();
+            }
+            else if (ChosenTopic == "Games")
+            {
+                Engine.GamesQuiz();
+            }
+            else if (ChosenTopic == "Music")
+            {
+                Engine.MusicQuiz();
+            }
+            else if (ChosenTopic == "Geography")
+            {
+                Engine.GeographyQuiz();
+            }
+            else if (ChosenTopic == "Maths")
+            {
+                Engine.MathsQuiz();
+            }
+            #region
+            //Hidden
+            //else if (ChosenTopic == "LOTR")
+            //{
+            //    Engine.LOTRQuiz();
+            //}
+            #endregion
+            else
+            {
+                MessageBox.Show("PLEASE CHOOSE A GOD DAMN THEME FOR THE QUIZ!");
+            }
+        }
     }
 }

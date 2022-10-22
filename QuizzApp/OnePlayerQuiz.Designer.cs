@@ -82,12 +82,13 @@
             // 
             // selectAnswerBtn
             // 
-            this.selectAnswerBtn.Location = new System.Drawing.Point(518, 293);
+            this.selectAnswerBtn.Location = new System.Drawing.Point(519, 293);
             this.selectAnswerBtn.Name = "selectAnswerBtn";
             this.selectAnswerBtn.Size = new System.Drawing.Size(130, 64);
             this.selectAnswerBtn.TabIndex = 4;
             this.selectAnswerBtn.Text = "Select Answer";
             this.selectAnswerBtn.UseVisualStyleBackColor = true;
+            this.selectAnswerBtn.Click += new System.EventHandler(this.selectAnswerBtn_Click);
             // 
             // nameOfQuestionLbl
             // 
@@ -112,6 +113,7 @@
             this.Controls.Add(this.ansARadioBtn);
             this.Name = "OnePlayerQuiz";
             this.Text = "OnePlayerQuiz";
+            this.Load += new System.EventHandler(this.OnePlayerQuiz_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
