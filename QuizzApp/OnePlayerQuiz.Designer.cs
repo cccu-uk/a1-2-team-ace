@@ -39,7 +39,7 @@
             // ansARadioBtn
             // 
             this.ansARadioBtn.AutoSize = true;
-            this.ansARadioBtn.Location = new System.Drawing.Point(264, 245);
+            this.ansARadioBtn.Location = new System.Drawing.Point(97, 280);
             this.ansARadioBtn.Name = "ansARadioBtn";
             this.ansARadioBtn.Size = new System.Drawing.Size(123, 24);
             this.ansARadioBtn.TabIndex = 0;
@@ -50,7 +50,7 @@
             // ansBRadioBtn
             // 
             this.ansBRadioBtn.AutoSize = true;
-            this.ansBRadioBtn.Location = new System.Drawing.Point(264, 293);
+            this.ansBRadioBtn.Location = new System.Drawing.Point(97, 328);
             this.ansBRadioBtn.Name = "ansBRadioBtn";
             this.ansBRadioBtn.Size = new System.Drawing.Size(122, 24);
             this.ansBRadioBtn.TabIndex = 1;
@@ -61,7 +61,7 @@
             // ansCRadioBtn
             // 
             this.ansCRadioBtn.AutoSize = true;
-            this.ansCRadioBtn.Location = new System.Drawing.Point(264, 343);
+            this.ansCRadioBtn.Location = new System.Drawing.Point(97, 378);
             this.ansCRadioBtn.Name = "ansCRadioBtn";
             this.ansCRadioBtn.Size = new System.Drawing.Size(122, 24);
             this.ansCRadioBtn.TabIndex = 2;
@@ -72,7 +72,7 @@
             // ansDRadioBtn
             // 
             this.ansDRadioBtn.AutoSize = true;
-            this.ansDRadioBtn.Location = new System.Drawing.Point(264, 394);
+            this.ansDRadioBtn.Location = new System.Drawing.Point(97, 429);
             this.ansDRadioBtn.Name = "ansDRadioBtn";
             this.ansDRadioBtn.Size = new System.Drawing.Size(124, 24);
             this.ansDRadioBtn.TabIndex = 3;
@@ -82,7 +82,7 @@
             // 
             // selectAnswerBtn
             // 
-            this.selectAnswerBtn.Location = new System.Drawing.Point(519, 293);
+            this.selectAnswerBtn.Location = new System.Drawing.Point(545, 328);
             this.selectAnswerBtn.Name = "selectAnswerBtn";
             this.selectAnswerBtn.Size = new System.Drawing.Size(130, 64);
             this.selectAnswerBtn.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             this.nameOfQuestionLbl.AutoSize = true;
             this.nameOfQuestionLbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameOfQuestionLbl.Location = new System.Drawing.Point(370, 60);
+            this.nameOfQuestionLbl.Location = new System.Drawing.Point(97, 49);
             this.nameOfQuestionLbl.Name = "nameOfQuestionLbl";
             this.nameOfQuestionLbl.Size = new System.Drawing.Size(261, 41);
             this.nameOfQuestionLbl.TabIndex = 5;
@@ -120,12 +120,11 @@
         }
 
         #endregion
-
-        private RadioButton ansARadioBtn;
-        private RadioButton ansBRadioBtn;
-        private RadioButton ansCRadioBtn;
-        private RadioButton ansDRadioBtn;
-        private Button selectAnswerBtn;
         private Label nameOfQuestionLbl;
+        public RadioButton ansARadioBtn;
+        public RadioButton ansBRadioBtn;
+        public RadioButton ansCRadioBtn;
+        public RadioButton ansDRadioBtn;
+        public Button selectAnswerBtn;
     }
 }

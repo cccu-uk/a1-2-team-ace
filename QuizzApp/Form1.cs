@@ -27,15 +27,16 @@ namespace QuizzApp
         {
             
         }
-
+        public int questionInc = 0;
         private void button1_Click(object sender, EventArgs e)
         {
+            OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
             Engine.OpenOnePlayerForm();
 
 
             if (ChosenTopic == "Movies")
             {
-                Engine.MathsQuiz();
+                Engine.MoviesQuiz(questionInc++);
             }
             else if (ChosenTopic == "Games")
             {
@@ -62,7 +63,7 @@ namespace QuizzApp
             #endregion
             else
             {
-                MessageBox.Show("PLEASE CHOOSE A GOD DAMN THEME FOR THE QUIZ!");
+                MessageBox.Show("PLEASE CHOOSE THEME FOR THE QUIZ!");
             }
         }
     }

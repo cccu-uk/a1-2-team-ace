@@ -26,9 +26,10 @@ namespace QuizzApp
         private void OnePlayerQuiz_Load(object sender, EventArgs e)
         {
         }
-
-        private void selectAnswerBtn_Click(object sender, EventArgs e)
+        public bool selectAnswerBtnWasClicked = false;
+        public void selectAnswerBtn_Click(object sender, EventArgs e)
         {
+            bool selectAnswerBtnWasClicked = true;
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)

@@ -13,12 +13,64 @@ namespace QuizzApp
             Form1 form1 = new Form1();
             OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
         }
-
-        public static void MoviesQuiz()
+        public static void MoviesQuiz(int questions)
         {
             OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
             onePlayerQuiz.QuestionLblTxt = "Movieeeeeee";
             //------------------------------------------------------------//
+
+            switch (questions)
+            {
+                case 0:
+                    onePlayerQuiz.QuestionLblTxt = "When was the movie 'shawshank redemption' released? ";
+
+                    onePlayerQuiz.ansARadioBtn.Text = "1994";
+                    onePlayerQuiz.ansBRadioBtn.Text = "1995";
+                    onePlayerQuiz.ansCRadioBtn.Text = "1996";
+                    onePlayerQuiz.ansDRadioBtn.Text = "1997";
+
+                    break;
+
+                case 1:
+                    onePlayerQuiz.QuestionLblTxt = "What's the name of the skyscraper in Die Hard? ";
+
+                    onePlayerQuiz.ansARadioBtn.Text = "Nakatomi Plaza";
+                    onePlayerQuiz.ansBRadioBtn.Text = "Willis Tower";
+                    onePlayerQuiz.ansCRadioBtn.Text = "The St. Regis Chicago";
+                    onePlayerQuiz.ansDRadioBtn.Text = "Fake ans";
+
+                    break;
+
+                case 2:
+                    onePlayerQuiz.QuestionLblTxt = "When was the movie 'shawshank redemption' released? ";
+
+                    onePlayerQuiz.ansARadioBtn.Text = "1994";
+                    onePlayerQuiz.ansBRadioBtn.Text = "1995";
+                    onePlayerQuiz.ansCRadioBtn.Text = "1996";
+                    onePlayerQuiz.ansDRadioBtn.Text = "1997";
+
+                    break;
+
+                case 3:
+                    onePlayerQuiz.QuestionLblTxt = "When was the movie 'shawshank redemption' released? ";
+
+                    onePlayerQuiz.ansARadioBtn.Text = "1994";
+                    onePlayerQuiz.ansBRadioBtn.Text = "1995";
+                    onePlayerQuiz.ansCRadioBtn.Text = "1996";
+                    onePlayerQuiz.ansDRadioBtn.Text = "1997";
+
+                    break;
+
+                case 4:
+                    onePlayerQuiz.QuestionLblTxt = "When was the movie 'shawshank redemption' released? ";
+
+                    onePlayerQuiz.ansARadioBtn.Text = "1994";
+                    onePlayerQuiz.ansBRadioBtn.Text = "1995";
+                    onePlayerQuiz.ansCRadioBtn.Text = "1996";
+                    onePlayerQuiz.ansDRadioBtn.Text = "1997";
+
+                    break;
+            }
 
             //------------------------------------------------------------//
             onePlayerQuiz.Show();
@@ -29,6 +81,8 @@ namespace QuizzApp
             OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
             onePlayerQuiz.QuestionLblTxt = "Musicccccccccccc";
             //------------------------------------------------------------//
+
+
 
             //------------------------------------------------------------//
             onePlayerQuiz.Show();

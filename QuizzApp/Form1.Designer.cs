@@ -86,6 +86,6 @@
 
         private Button button1;
         private Button button2;
-        public ComboBox chosenTopicComboBox;
+        private ComboBox chosenTopicComboBox;
     }
 }
