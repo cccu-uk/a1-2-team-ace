@@ -9,8 +9,8 @@ namespace QuizzApp
 
         public string ChosenTopic
         {
-            get { return this.chosenTopicComboBox.Text; }
-            set { this.chosenTopicComboBox.Text = value; }
+            get { return chosenTopicComboBox.Text; }
+            set { chosenTopicComboBox.Text = value; }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -27,16 +27,19 @@ namespace QuizzApp
         {
             
         }
-        public int questionInc = 0;
+        public int questionInc = 0; // Change this value manually to change on to the next question
         private void button1_Click(object sender, EventArgs e)
         {
+
             OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
             Engine.OpenOnePlayerForm();
 
-
             if (ChosenTopic == "Movies")
             {
-                Engine.MoviesQuiz(questionInc++);
+                var engine = new Engine();
+                engine.MoviesQuiz(questionInc); // When the user clicks the button in form 2 it needs to increment the questionInc
+                                                // to move onto the next question
+
             }
             else if (ChosenTopic == "Games")
             {

@@ -12,6 +12,7 @@ namespace QuizzApp
 {
     public partial class OnePlayerQuiz : Form
     {
+        public int nextQuestion = 0;
         public OnePlayerQuiz()
         {
             InitializeComponent();
@@ -26,12 +27,15 @@ namespace QuizzApp
         private void OnePlayerQuiz_Load(object sender, EventArgs e)
         {
         }
-        public bool selectAnswerBtnWasClicked = false;
-        public void selectAnswerBtn_Click(object sender, EventArgs e)
-        {
-            bool selectAnswerBtnWasClicked = true;
-        }
+        // public bool selectAnswerBtnWasClicked = false;
+        public string chosenTopic;
 
+
+        private void selectAnswerBtn_Click(object sender, EventArgs e)
+        {
+            //Engine.MoviesQuiz(questionInc);
+
+        }
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 

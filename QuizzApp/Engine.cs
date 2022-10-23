@@ -13,7 +13,7 @@ namespace QuizzApp
             Form1 form1 = new Form1();
             OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
         }
-        public static void MoviesQuiz(int questions)
+        public void MoviesQuiz(int questions)
         {
             OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
             onePlayerQuiz.QuestionLblTxt = "Movieeeeeee";
