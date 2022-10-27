@@ -34,6 +34,7 @@
             this.ansDRadioBtn = new System.Windows.Forms.RadioButton();
             this.selectAnswerBtn = new System.Windows.Forms.Button();
             this.nameOfQuestionLbl = new System.Windows.Forms.Label();
+            this.showStats = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ansARadioBtn
@@ -104,11 +105,22 @@
             this.nameOfQuestionLbl.TabIndex = 5;
             this.nameOfQuestionLbl.Text = "Name of Question";
             // 
+            // showStats
+            // 
+            this.showStats.Location = new System.Drawing.Point(863, 125);
+            this.showStats.Name = "showStats";
+            this.showStats.Size = new System.Drawing.Size(134, 48);
+            this.showStats.TabIndex = 6;
+            this.showStats.Text = "Show Stats";
+            this.showStats.UseVisualStyleBackColor = true;
+            this.showStats.Click += new System.EventHandler(this.showStats_Click);
+            // 
             // OnePlayerQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 550);
+            this.Controls.Add(this.showStats);
             this.Controls.Add(this.nameOfQuestionLbl);
             this.Controls.Add(this.selectAnswerBtn);
             this.Controls.Add(this.ansDRadioBtn);
@@ -130,5 +142,6 @@
         public RadioButton ansCRadioBtn;
         public RadioButton ansDRadioBtn;
         public Button selectAnswerBtn;
+        private Button showStats;
     }
 }

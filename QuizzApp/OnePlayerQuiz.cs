@@ -13,10 +13,12 @@ namespace QuizzApp
     public partial class OnePlayerQuiz : Form
     {
         int nextQuestion = 0;
+        int Score = 0;
         public OnePlayerQuiz()
         {
             InitializeComponent();
             MoviesQuiz(nextQuestion);
+            showStats.Hide();
 
 
             //engine.MoviesQuiz(1);
@@ -51,9 +53,6 @@ namespace QuizzApp
                     ansBRadioBtn.Text = "1995";
                     ansCRadioBtn.Text = "1996";
                     ansDRadioBtn.Text = "1997";
-
-                    correctAnswer = "a";
-
                     break;
 
                 case 1:
@@ -62,11 +61,6 @@ namespace QuizzApp
                     ansBRadioBtn.Text = "Willis Tower";
                     ansCRadioBtn.Text = "The St. Regis Chicago";
                     ansDRadioBtn.Text = "Fake ans";
-
-                    correctAnswer = "a";
-
-
-
                     break;
 
                 case 2:
@@ -75,7 +69,6 @@ namespace QuizzApp
                     ansBRadioBtn.Text = "1995";
                     ansCRadioBtn.Text = "1996";
                     ansDRadioBtn.Text = "1997";
-
                     break;
 
                 case 3:
@@ -84,7 +77,6 @@ namespace QuizzApp
                     ansBRadioBtn.Text = "1995";
                     ansCRadioBtn.Text = "1996";
                     ansDRadioBtn.Text = "1997";
-
                     break;
 
                 case 4:
@@ -93,11 +85,19 @@ namespace QuizzApp
                     ansBRadioBtn.Text = "1995";
                     ansCRadioBtn.Text = "1996";
                     ansDRadioBtn.Text = "1997";
-
                     break;
             }
 
             //------------------------------------------------------------//
+        }
+
+
+        public void UnselectRadioBtns()
+        {
+            ansARadioBtn.Checked = false;
+            ansBRadioBtn.Checked = false;
+            ansCRadioBtn.Checked = false;
+            ansDRadioBtn.Checked = false;
         }
 
 
@@ -108,19 +108,73 @@ namespace QuizzApp
             //var senderObject = (RadioButton)sender;
             //var checkedButton = container.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
 
-            if(nameOfQuestionLbl.Text == "When was the movie 'shawshank redemption' released? ")
+            if (nameOfQuestionLbl.Text == "When was the movie 'shawshank redemption' released? ")
             {
-                MessageBox.Show("It Works"); // Choose First Question Manually -- If anyone can change it automatically choose
-                                             // from switch it would be better
+                if (ansARadioBtn.Checked == true)
+                {
+                    Score++;
+                }
+                nextQuestion++;
+                UnselectRadioBtns();
+                MoviesQuiz(nextQuestion);
             }
 
+            if (nameOfQuestionLbl.Text == "What's the name of the skyscraper in Die Hard? ")
+            {
+                if (ansARadioBtn.Checked == true)
+                {
+                    Score++;
+                }
+                nextQuestion++;
+                UnselectRadioBtns();
+                MoviesQuiz(nextQuestion);
+            }
+
+            if (nameOfQuestionLbl.Text == "Test 3 ")
+            {
+                if (ansARadioBtn.Checked == true)
+                {
+                    Score++;
+                }
+                nextQuestion++;
+                UnselectRadioBtns();
+                MoviesQuiz(nextQuestion);
+            }
+
+            if (nameOfQuestionLbl.Text == "Test 4 ")
+            {
+                if (ansBRadioBtn.Checked == true)
+                {
+                    Score++;
+                }
+                nextQuestion++;
+                UnselectRadioBtns();
+                MoviesQuiz(nextQuestion);
+
+            }
+
+            if (nameOfQuestionLbl.Text == "Test 5 ")
+            {
+                if (ansBRadioBtn.Checked == true)
+                {
+                    Score++;
+                }
+                nextQuestion++;
+                UnselectRadioBtns();
+                MoviesQuiz(nextQuestion);
+                showStats.Show();
+            }
 
 
             if (chosenTopicTxt == "Movies")
             {
                 return;
             }
+        }
 
+        private void showStats_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Score.ToString());
         }
     }
 }
