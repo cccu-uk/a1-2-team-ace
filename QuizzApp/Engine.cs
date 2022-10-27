@@ -11,12 +11,16 @@ namespace QuizzApp
         public static void OpenOnePlayerForm()
         {
             Form1 form1 = new Form1();
+            form1.Hide();
             OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
+            onePlayerQuiz.Closed += (s, args) => form1.Close();
+            onePlayerQuiz.Show();
         }
-        public void MoviesQuiz(int questions)
+        public int nextQuestion = 0;
+        public static void MoviesQuiz(int questions)
         {
             OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
-            onePlayerQuiz.QuestionLblTxt = "Movieeeeeee";
+            //onePlayerQuiz.QuestionLblTxt = "Movieeeeeee";
             //------------------------------------------------------------//
 
             switch (questions)
@@ -42,7 +46,7 @@ namespace QuizzApp
                     break;
 
                 case 2:
-                    onePlayerQuiz.QuestionLblTxt = "When was the movie 'shawshank redemption' released? ";
+                    onePlayerQuiz.QuestionLblTxt = "Test 3 ";
 
                     onePlayerQuiz.ansARadioBtn.Text = "1994";
                     onePlayerQuiz.ansBRadioBtn.Text = "1995";
@@ -52,7 +56,7 @@ namespace QuizzApp
                     break;
 
                 case 3:
-                    onePlayerQuiz.QuestionLblTxt = "When was the movie 'shawshank redemption' released? ";
+                    onePlayerQuiz.QuestionLblTxt = "Test 4 ";
 
                     onePlayerQuiz.ansARadioBtn.Text = "1994";
                     onePlayerQuiz.ansBRadioBtn.Text = "1995";
@@ -62,7 +66,7 @@ namespace QuizzApp
                     break;
 
                 case 4:
-                    onePlayerQuiz.QuestionLblTxt = "When was the movie 'shawshank redemption' released? ";
+                    onePlayerQuiz.QuestionLblTxt = "Test 5 ";
 
                     onePlayerQuiz.ansARadioBtn.Text = "1994";
                     onePlayerQuiz.ansBRadioBtn.Text = "1995";
@@ -76,7 +80,7 @@ namespace QuizzApp
             onePlayerQuiz.Show();
         }
 
-        public static void MusicQuiz()
+        public static void MusicQuiz(int question)
         {
             OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
             onePlayerQuiz.QuestionLblTxt = "Musicccccccccccc";

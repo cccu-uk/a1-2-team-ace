@@ -44,6 +44,7 @@
             this.ansARadioBtn.Size = new System.Drawing.Size(123, 24);
             this.ansARadioBtn.TabIndex = 0;
             this.ansARadioBtn.TabStop = true;
+            this.ansARadioBtn.Tag = "a";
             this.ansARadioBtn.Text = "ansARadioBtn";
             this.ansARadioBtn.UseVisualStyleBackColor = true;
             // 
@@ -55,6 +56,7 @@
             this.ansBRadioBtn.Size = new System.Drawing.Size(122, 24);
             this.ansBRadioBtn.TabIndex = 1;
             this.ansBRadioBtn.TabStop = true;
+            this.ansBRadioBtn.Tag = "b";
             this.ansBRadioBtn.Text = "ansBRadioBtn";
             this.ansBRadioBtn.UseVisualStyleBackColor = true;
             // 
@@ -66,6 +68,7 @@
             this.ansCRadioBtn.Size = new System.Drawing.Size(122, 24);
             this.ansCRadioBtn.TabIndex = 2;
             this.ansCRadioBtn.TabStop = true;
+            this.ansCRadioBtn.Tag = "c";
             this.ansCRadioBtn.Text = "ansCRadioBtn";
             this.ansCRadioBtn.UseVisualStyleBackColor = true;
             // 
@@ -77,6 +80,7 @@
             this.ansDRadioBtn.Size = new System.Drawing.Size(124, 24);
             this.ansDRadioBtn.TabIndex = 3;
             this.ansDRadioBtn.TabStop = true;
+            this.ansDRadioBtn.Tag = "d";
             this.ansDRadioBtn.Text = "ansDRadioBtn";
             this.ansDRadioBtn.UseVisualStyleBackColor = true;
             // 

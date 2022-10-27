@@ -27,18 +27,19 @@ namespace QuizzApp
         {
             
         }
-        public int questionInc = 0; // Change this value manually to change on to the next question
+        public int questionInc = 1; // Change this value manually to change on to the next question
         private void button1_Click(object sender, EventArgs e)
         {
 
-            OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
-            Engine.OpenOnePlayerForm();
+            //Engine.OpenOnePlayerForm();
 
             if (ChosenTopic == "Movies")
             {
-                var engine = new Engine();
-                engine.MoviesQuiz(questionInc); // When the user clicks the button in form 2 it needs to increment the questionInc
-                                                // to move onto the next question
+                OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
+                //Engine.OpenOnePlayerForm();
+                Engine.OpenOnePlayerForm();
+                //Engine.MoviesQuiz(questionInc); // When the user clicks the button in form 2 it needs to increment the questionInc
+                // to move onto the next question
 
             }
             else if (ChosenTopic == "Games")
@@ -47,7 +48,7 @@ namespace QuizzApp
             }
             else if (ChosenTopic == "Music")
             {
-                Engine.MusicQuiz();
+                Engine.MusicQuiz(0);
             }
             else if (ChosenTopic == "Geography")
             {
