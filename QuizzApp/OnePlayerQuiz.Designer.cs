@@ -35,14 +35,18 @@
             this.selectAnswerBtn = new System.Windows.Forms.Button();
             this.nameOfQuestionLbl = new System.Windows.Forms.Label();
             this.showStats = new System.Windows.Forms.Button();
+            this.backHomeBtn = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // ansARadioBtn
             // 
             this.ansARadioBtn.AutoSize = true;
+            this.ansARadioBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ansARadioBtn.Location = new System.Drawing.Point(97, 280);
             this.ansARadioBtn.Name = "ansARadioBtn";
-            this.ansARadioBtn.Size = new System.Drawing.Size(123, 24);
+            this.ansARadioBtn.Size = new System.Drawing.Size(178, 35);
             this.ansARadioBtn.TabIndex = 0;
             this.ansARadioBtn.TabStop = true;
             this.ansARadioBtn.Tag = "a";
@@ -52,9 +56,10 @@
             // ansBRadioBtn
             // 
             this.ansBRadioBtn.AutoSize = true;
+            this.ansBRadioBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ansBRadioBtn.Location = new System.Drawing.Point(97, 328);
             this.ansBRadioBtn.Name = "ansBRadioBtn";
-            this.ansBRadioBtn.Size = new System.Drawing.Size(122, 24);
+            this.ansBRadioBtn.Size = new System.Drawing.Size(176, 35);
             this.ansBRadioBtn.TabIndex = 1;
             this.ansBRadioBtn.TabStop = true;
             this.ansBRadioBtn.Tag = "b";
@@ -64,9 +69,10 @@
             // ansCRadioBtn
             // 
             this.ansCRadioBtn.AutoSize = true;
+            this.ansCRadioBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ansCRadioBtn.Location = new System.Drawing.Point(97, 378);
             this.ansCRadioBtn.Name = "ansCRadioBtn";
-            this.ansCRadioBtn.Size = new System.Drawing.Size(122, 24);
+            this.ansCRadioBtn.Size = new System.Drawing.Size(177, 35);
             this.ansCRadioBtn.TabIndex = 2;
             this.ansCRadioBtn.TabStop = true;
             this.ansCRadioBtn.Tag = "c";
@@ -76,9 +82,10 @@
             // ansDRadioBtn
             // 
             this.ansDRadioBtn.AutoSize = true;
+            this.ansDRadioBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ansDRadioBtn.Location = new System.Drawing.Point(97, 429);
             this.ansDRadioBtn.Name = "ansDRadioBtn";
-            this.ansDRadioBtn.Size = new System.Drawing.Size(124, 24);
+            this.ansDRadioBtn.Size = new System.Drawing.Size(179, 35);
             this.ansDRadioBtn.TabIndex = 3;
             this.ansDRadioBtn.TabStop = true;
             this.ansDRadioBtn.Tag = "d";
@@ -87,9 +94,10 @@
             // 
             // selectAnswerBtn
             // 
-            this.selectAnswerBtn.Location = new System.Drawing.Point(545, 328);
+            this.selectAnswerBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.selectAnswerBtn.Location = new System.Drawing.Point(490, 495);
             this.selectAnswerBtn.Name = "selectAnswerBtn";
-            this.selectAnswerBtn.Size = new System.Drawing.Size(130, 64);
+            this.selectAnswerBtn.Size = new System.Drawing.Size(147, 43);
             this.selectAnswerBtn.TabIndex = 4;
             this.selectAnswerBtn.Text = "Select Answer";
             this.selectAnswerBtn.UseVisualStyleBackColor = true;
@@ -98,28 +106,50 @@
             // nameOfQuestionLbl
             // 
             this.nameOfQuestionLbl.AutoSize = true;
-            this.nameOfQuestionLbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameOfQuestionLbl.Location = new System.Drawing.Point(97, 49);
+            this.nameOfQuestionLbl.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.nameOfQuestionLbl.Location = new System.Drawing.Point(12, 59);
             this.nameOfQuestionLbl.Name = "nameOfQuestionLbl";
-            this.nameOfQuestionLbl.Size = new System.Drawing.Size(261, 41);
+            this.nameOfQuestionLbl.Size = new System.Drawing.Size(303, 45);
             this.nameOfQuestionLbl.TabIndex = 5;
             this.nameOfQuestionLbl.Text = "Name of Question";
             // 
             // showStats
             // 
-            this.showStats.Location = new System.Drawing.Point(863, 125);
+            this.showStats.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.showStats.Location = new System.Drawing.Point(310, 310);
             this.showStats.Name = "showStats";
-            this.showStats.Size = new System.Drawing.Size(134, 48);
+            this.showStats.Size = new System.Drawing.Size(156, 72);
             this.showStats.TabIndex = 6;
             this.showStats.Text = "Show Stats";
             this.showStats.UseVisualStyleBackColor = true;
             this.showStats.Click += new System.EventHandler(this.showStats_Click);
+            // 
+            // backHomeBtn
+            // 
+            this.backHomeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.backHomeBtn.Location = new System.Drawing.Point(676, 310);
+            this.backHomeBtn.Name = "backHomeBtn";
+            this.backHomeBtn.Size = new System.Drawing.Size(157, 72);
+            this.backHomeBtn.TabIndex = 7;
+            this.backHomeBtn.Text = "Return Home";
+            this.backHomeBtn.UseVisualStyleBackColor = true;
+            this.backHomeBtn.Click += new System.EventHandler(this.backHomeBtn_Click);
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(310, 157);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(687, 332);
+            this.pictureBox.TabIndex = 8;
+            this.pictureBox.TabStop = false;
             // 
             // OnePlayerQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 550);
+            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.backHomeBtn);
             this.Controls.Add(this.showStats);
             this.Controls.Add(this.nameOfQuestionLbl);
             this.Controls.Add(this.selectAnswerBtn);
@@ -130,6 +160,7 @@
             this.Name = "OnePlayerQuiz";
             this.Text = "OnePlayerQuiz";
             this.Load += new System.EventHandler(this.OnePlayerQuiz_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,5 +174,7 @@
         public RadioButton ansDRadioBtn;
         public Button selectAnswerBtn;
         private Button showStats;
+        private Button backHomeBtn;
+        private PictureBox pictureBox;
     }
 }

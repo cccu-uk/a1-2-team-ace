@@ -16,66 +16,7 @@ namespace QuizzApp
             onePlayerQuiz.Closed += (s, args) => form1.Close();
             onePlayerQuiz.Show();
         }
-        public int nextQuestion = 0;
-        public void MoviesQuiz(int questions)
-        {
-            OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
-            //onePlayerQuiz.QuestionLblTxt = "Movieeeeeee";
-            //------------------------------------------------------------//
-
-            switch (questions)
-            {
-                case 0:
-                    onePlayerQuiz.QuestionLblTxt = "When was the movie 'shawshank redemption' released? ";
-                    onePlayerQuiz.ansARadioBtn.Text = "1994";
-                    onePlayerQuiz.ansBRadioBtn.Text = "1995";
-                    onePlayerQuiz.ansCRadioBtn.Text = "1996";
-                    onePlayerQuiz.ansDRadioBtn.Text = "1997";
-
-
-                    break;
-
-                case 1:
-                    onePlayerQuiz.QuestionLblTxt = "What's the name of the skyscraper in Die Hard? ";
-                    onePlayerQuiz.ansARadioBtn.Text = "Nakatomi Plaza";
-                    onePlayerQuiz.ansBRadioBtn.Text = "Willis Tower";
-                    onePlayerQuiz.ansCRadioBtn.Text = "The St. Regis Chicago";
-                    onePlayerQuiz.ansDRadioBtn.Text = "Fake ans";
-
-                    break;
-
-                case 2:
-                    onePlayerQuiz.QuestionLblTxt = "Test 3 ";
-                    onePlayerQuiz.ansARadioBtn.Text = "1994";
-                    onePlayerQuiz.ansBRadioBtn.Text = "1995";
-                    onePlayerQuiz.ansCRadioBtn.Text = "1996";
-                    onePlayerQuiz.ansDRadioBtn.Text = "1997";
-
-                    break;
-
-                case 3:
-                    onePlayerQuiz.QuestionLblTxt = "Test 4 ";
-                    onePlayerQuiz.ansARadioBtn.Text = "1994";
-                    onePlayerQuiz.ansBRadioBtn.Text = "1995";
-                    onePlayerQuiz.ansCRadioBtn.Text = "1996";
-                    onePlayerQuiz.ansDRadioBtn.Text = "1997";
-
-                    break;
-
-                case 4:
-                    onePlayerQuiz.QuestionLblTxt = "Test 5 ";
-                    onePlayerQuiz.ansARadioBtn.Text = "1994";
-                    onePlayerQuiz.ansBRadioBtn.Text = "1995";
-                    onePlayerQuiz.ansCRadioBtn.Text = "1996";
-                    onePlayerQuiz.ansDRadioBtn.Text = "1997";
-
-                    break;
-            }
-
-            //------------------------------------------------------------//
-            onePlayerQuiz.Show();
-        }
-
+        
         public static void MusicQuiz(int question)
         {
             OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
@@ -107,26 +48,5 @@ namespace QuizzApp
             //------------------------------------------------------------//
             onePlayerQuiz.Show();
         }
-
-        public static void MathsQuiz()
-        {
-            OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
-            onePlayerQuiz.QuestionLblTxt = "Mathsssssssss";
-            //------------------------------------------------------------//
-
-            //------------------------------------------------------------//
-            onePlayerQuiz.Show();
-        }
-        #region
-        //public static void LOTRQuiz()
-        //{
-        //    OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
-        //    onePlayerQuiz.QuestionLblTxt = "Hidden";
-        //    //------------------------------------------------------------//
-
-        //    //------------------------------------------------------------//
-        //    onePlayerQuiz.Show();
-        //}
-        #endregion
     }
 }

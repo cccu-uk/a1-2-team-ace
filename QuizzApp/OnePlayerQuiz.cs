@@ -19,9 +19,29 @@ namespace QuizzApp
             InitializeComponent();
             MoviesQuiz(nextQuestion);
             showStats.Hide();
+            backHomeBtn.Hide();
 
 
             //engine.MoviesQuiz(1);
+        }
+
+        public void UnselectRadioBtns()
+        {
+            ansARadioBtn.Checked = false;
+            ansBRadioBtn.Checked = false;
+            ansCRadioBtn.Checked = false;
+            ansDRadioBtn.Checked = false;
+        }
+
+        public void EndHideBtns()
+        {
+            selectAnswerBtn.Hide();
+            nameOfQuestionLbl.Hide();
+            ansARadioBtn.Hide();
+            ansBRadioBtn.Hide();
+            ansCRadioBtn.Hide();
+            ansDRadioBtn.Hide();
+            pictureBox.Hide();
         }
 
         public string QuestionLblTxt
@@ -32,19 +52,16 @@ namespace QuizzApp
 
         private void OnePlayerQuiz_Load(object sender, EventArgs e)
         {
-            //Engine.MoviesQuiz(3);
+            UnselectRadioBtns();
         }
-        // public bool selectAnswerBtnWasClicked = false;
-
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
         }
 
-        string correctAnswer;
-
         private void MoviesQuiz(int questions)
         {
+            UnselectRadioBtns();
             switch (questions)
             {
                 case 0:
@@ -91,90 +108,89 @@ namespace QuizzApp
             //------------------------------------------------------------//
         }
 
-
-        public void UnselectRadioBtns()
-        {
-            ansARadioBtn.Checked = false;
-            ansBRadioBtn.Checked = false;
-            ansCRadioBtn.Checked = false;
-            ansDRadioBtn.Checked = false;
-        }
-
-
         private void selectAnswerBtn_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Form form = System.Windows.Forms.Application.OpenForms["Form1"];
+            nextQuestion++;
+            Form form = Application.OpenForms["Form1"];
             string chosenTopicTxt = ((Form1)form).ChosenTopic;
-            //var senderObject = (RadioButton)sender;
-            //var checkedButton = container.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
-
-            if (nameOfQuestionLbl.Text == "When was the movie 'shawshank redemption' released? ")
-            {
-                if (ansARadioBtn.Checked == true)
-                {
-                    Score++;
-                }
-                nextQuestion++;
-                UnselectRadioBtns();
-                MoviesQuiz(nextQuestion);
-            }
-
-            if (nameOfQuestionLbl.Text == "What's the name of the skyscraper in Die Hard? ")
-            {
-                if (ansARadioBtn.Checked == true)
-                {
-                    Score++;
-                }
-                nextQuestion++;
-                UnselectRadioBtns();
-                MoviesQuiz(nextQuestion);
-            }
-
-            if (nameOfQuestionLbl.Text == "Test 3 ")
-            {
-                if (ansARadioBtn.Checked == true)
-                {
-                    Score++;
-                }
-                nextQuestion++;
-                UnselectRadioBtns();
-                MoviesQuiz(nextQuestion);
-            }
-
-            if (nameOfQuestionLbl.Text == "Test 4 ")
-            {
-                if (ansBRadioBtn.Checked == true)
-                {
-                    Score++;
-                }
-                nextQuestion++;
-                UnselectRadioBtns();
-                MoviesQuiz(nextQuestion);
-
-            }
-
-            if (nameOfQuestionLbl.Text == "Test 5 ")
-            {
-                if (ansBRadioBtn.Checked == true)
-                {
-                    Score++;
-                }
-                nextQuestion++;
-                UnselectRadioBtns();
-                MoviesQuiz(nextQuestion);
-                showStats.Show();
-            }
-
 
             if (chosenTopicTxt == "Movies")
             {
-                return;
+                if (nameOfQuestionLbl.Text == "When was the movie 'shawshank redemption' released? ")
+                {
+                    if (ansARadioBtn.Checked == true)
+                    {
+                        Score++;
+                    }
+                    MoviesQuiz(nextQuestion);
+                }
+
+                if (nameOfQuestionLbl.Text == "What's the name of the skyscraper in Die Hard? ")
+                {
+                    if (ansARadioBtn.Checked == true)
+                    {
+                        Score++;
+                    }
+                    UnselectRadioBtns();
+                    MoviesQuiz(nextQuestion);
+                }
+
+                if (nameOfQuestionLbl.Text == "Test 3 ")
+                {
+                    if (ansARadioBtn.Checked == true)
+                    {
+                        Score++;
+                    }
+                    UnselectRadioBtns();
+                    MoviesQuiz(nextQuestion);
+                }
+
+                if (nameOfQuestionLbl.Text == "Test 4 ")
+                {
+                    if (ansBRadioBtn.Checked == true)
+                    {
+                        Score++;
+                    }
+                    UnselectRadioBtns();
+                    MoviesQuiz(nextQuestion);
+
+                }
+
+                if (nameOfQuestionLbl.Text == "Test 5 ")
+                {
+                    if (ansBRadioBtn.Checked == true)
+                    {
+                        Score++;
+                        EndHideBtns();
+                        showStats.Show();
+                        backHomeBtn.Show();
+
+                    }
+                    if (ansARadioBtn.Checked == true || ansCRadioBtn.Checked == true || ansDRadioBtn.Checked == true)
+                    {
+                        EndHideBtns();
+                        showStats.Show();
+                        backHomeBtn.Show();
+                    }
+                    UnselectRadioBtns();
+                    MoviesQuiz(nextQuestion);
+                }
             }
+
+
+
+
+
         }
 
         private void showStats_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Score.ToString());
+            MessageBox.Show("Your results are " + Score.ToString() + " / 5 ");
+        }
+
+        private void backHomeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

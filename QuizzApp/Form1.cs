@@ -40,7 +40,6 @@ namespace QuizzApp
                 Engine.OpenOnePlayerForm();
                 //Engine.MoviesQuiz(questionInc); // When the user clicks the button in form 2 it needs to increment the questionInc
                 // to move onto the next question
-
             }
             else if (ChosenTopic == "Games")
             {
@@ -69,6 +68,8 @@ namespace QuizzApp
             {
                 MessageBox.Show("PLEASE CHOOSE THEME FOR THE QUIZ!");
             }
+
+            
         }
     }
 }
