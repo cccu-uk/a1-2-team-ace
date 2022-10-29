@@ -20,9 +20,6 @@ namespace QuizzApp
             MoviesQuiz(nextQuestion);
             showStats.Hide();
             backHomeBtn.Hide();
-
-
-            //engine.MoviesQuiz(1);
         }
 
         public void UnselectRadioBtns()
@@ -61,7 +58,6 @@ namespace QuizzApp
 
         private void MoviesQuiz(int questions)
         {
-            UnselectRadioBtns();
             switch (questions)
             {
                 case 0:
@@ -104,9 +100,50 @@ namespace QuizzApp
                     ansDRadioBtn.Text = "1997";
                     break;
             }
-
-            //------------------------------------------------------------//
         }
+        // ************** PLEASE FOLLOW THIS FORMAT WHO EVER DOES THIS ********************//
+        // ************** PLEASE FOLLOW THIS FORMAT WHO EVER DOES THIS ********************//
+        private void GamesQuiz(int questions)
+        {
+            switch (questions)
+            {
+
+            }
+        }
+        
+        private void MusicQuiz(int questions)
+        {
+            switch (questions)
+            {
+
+            }
+        }
+        
+        private void GeographyQuiz(int questions)
+        {
+            switch (questions)
+            {
+
+            }
+        }
+        
+        private void MathsQuiz(int questions)
+        {
+            switch (questions)
+            {
+
+            }
+        }
+        #region
+        private void LOTRQuiz(int questions)
+        {
+            switch (questions)
+            {
+
+            }
+        }
+        #endregion
+
 
         private void selectAnswerBtn_Click(object sender, EventArgs e)
         {
@@ -175,6 +212,33 @@ namespace QuizzApp
                     UnselectRadioBtns();
                     MoviesQuiz(nextQuestion);
                 }
+
+                if (chosenTopicTxt == "Games")
+                {
+                    return;
+                }
+                
+                if (chosenTopicTxt == "Music")
+                {
+                    return;
+                }
+                
+                if (chosenTopicTxt == "Geography")
+                {
+                    return;
+                }
+                
+                if (chosenTopicTxt == "Maths")
+                {
+                    return;
+                }
+                #region
+                if (chosenTopicTxt == "LOTR")
+                {
+                    return;
+                }
+                #endregion
+
             }
 
 

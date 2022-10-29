@@ -27,49 +27,39 @@ namespace QuizzApp
         {
             
         }
-        public int questionInc = 1; // Change this value manually to change on to the next question
         private void button1_Click(object sender, EventArgs e)
         {
-
-            //Engine.OpenOnePlayerForm();
-
             if (ChosenTopic == "Movies")
             {
-                OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
-                //Engine.OpenOnePlayerForm();
                 Engine.OpenOnePlayerForm();
-                //Engine.MoviesQuiz(questionInc); // When the user clicks the button in form 2 it needs to increment the questionInc
-                // to move onto the next question
             }
             else if (ChosenTopic == "Games")
             {
-                Engine.GamesQuiz();
+                Engine.OpenOnePlayerForm();
             }
             else if (ChosenTopic == "Music")
             {
-                Engine.MusicQuiz(0);
+                Engine.OpenOnePlayerForm();
             }
             else if (ChosenTopic == "Geography")
             {
-                Engine.GeographyQuiz();
+                Engine.OpenOnePlayerForm();
             }
             else if (ChosenTopic == "Maths")
             {
-                Engine.MathsQuiz();
+                Engine.OpenOnePlayerForm();
             }
             #region
             //Hidden
             //else if (ChosenTopic == "LOTR")
             //{
-            //    Engine.LOTRQuiz();
+            ///Engine.OpenOnePlayerForm();
             //}
             #endregion
             else
             {
                 MessageBox.Show("PLEASE CHOOSE THEME FOR THE QUIZ!");
             }
-
-            
         }
     }
 }
