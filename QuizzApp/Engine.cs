@@ -8,6 +8,7 @@ namespace QuizzApp
 {
     public sealed class Engine
     {
+        private static readonly Engine instance = new Engine();
         public static void OpenOnePlayerForm()
         {
             Form1 form1 = new Form1();
@@ -16,37 +17,12 @@ namespace QuizzApp
             onePlayerQuiz.Closed += (s, args) => form1.Close();
             onePlayerQuiz.Show();
         }
-        
-        public static void MusicQuiz(int question)
+        public static Engine Instance
         {
-            OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
-            onePlayerQuiz.QuestionLblTxt = "Musicccccccccccc";
-            //------------------------------------------------------------//
-
-
-
-            //------------------------------------------------------------//
-            onePlayerQuiz.Show();
-        }
-
-        public static void GamesQuiz()
-        {
-            OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
-            onePlayerQuiz.QuestionLblTxt = "Gamesssssssssssss";
-            //------------------------------------------------------------//
-
-            //------------------------------------------------------------//
-            onePlayerQuiz.Show();
-        }
-        
-        public static void GeographyQuiz()
-        {
-            OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
-            onePlayerQuiz.QuestionLblTxt = "Geographyyyyyyyyyy";
-            //------------------------------------------------------------//
-
-            //------------------------------------------------------------//
-            onePlayerQuiz.Show();
+            get
+            {
+                return instance;
+            }
         }
     }
 }

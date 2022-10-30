@@ -2,12 +2,14 @@ namespace QuizzApp
 {
     internal static class Program
     {
+        static public Engine engineCtrl;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            engineCtrl = Engine.Instance;
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();

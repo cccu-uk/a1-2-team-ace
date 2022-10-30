@@ -20,6 +20,7 @@ namespace QuizzApp
             chosenTopicComboBox.Items.Insert(2, "Music");
             chosenTopicComboBox.Items.Insert(3, "Geography");
             chosenTopicComboBox.Items.Insert(4, "Maths");
+            chosenTopicComboBox.Items.Insert(4, "LOTR");
 
         }
 
@@ -46,6 +47,10 @@ namespace QuizzApp
                 Engine.OpenOnePlayerForm();
             }
             else if (ChosenTopic == "Maths")
+            {
+                Engine.OpenOnePlayerForm();
+            }
+            else if (ChosenTopic == "LOTR")
             {
                 Engine.OpenOnePlayerForm();
             }

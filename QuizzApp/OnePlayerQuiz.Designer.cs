@@ -95,7 +95,7 @@
             // selectAnswerBtn
             // 
             this.selectAnswerBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.selectAnswerBtn.Location = new System.Drawing.Point(490, 495);
+            this.selectAnswerBtn.Location = new System.Drawing.Point(463, 495);
             this.selectAnswerBtn.Name = "selectAnswerBtn";
             this.selectAnswerBtn.Size = new System.Drawing.Size(147, 43);
             this.selectAnswerBtn.TabIndex = 4;
@@ -106,17 +106,18 @@
             // nameOfQuestionLbl
             // 
             this.nameOfQuestionLbl.AutoSize = true;
-            this.nameOfQuestionLbl.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.nameOfQuestionLbl.Location = new System.Drawing.Point(12, 59);
+            this.nameOfQuestionLbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.nameOfQuestionLbl.Location = new System.Drawing.Point(12, 26);
+            this.nameOfQuestionLbl.MaximumSize = new System.Drawing.Size(700, 100);
             this.nameOfQuestionLbl.Name = "nameOfQuestionLbl";
-            this.nameOfQuestionLbl.Size = new System.Drawing.Size(303, 45);
+            this.nameOfQuestionLbl.Size = new System.Drawing.Size(274, 41);
             this.nameOfQuestionLbl.TabIndex = 5;
             this.nameOfQuestionLbl.Text = "Name of Question";
             // 
             // showStats
             // 
             this.showStats.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.showStats.Location = new System.Drawing.Point(310, 310);
+            this.showStats.Location = new System.Drawing.Point(307, 328);
             this.showStats.Name = "showStats";
             this.showStats.Size = new System.Drawing.Size(156, 72);
             this.showStats.TabIndex = 6;
@@ -127,7 +128,7 @@
             // backHomeBtn
             // 
             this.backHomeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.backHomeBtn.Location = new System.Drawing.Point(676, 310);
+            this.backHomeBtn.Location = new System.Drawing.Point(649, 328);
             this.backHomeBtn.Name = "backHomeBtn";
             this.backHomeBtn.Size = new System.Drawing.Size(157, 72);
             this.backHomeBtn.TabIndex = 7;
@@ -137,9 +138,9 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(310, 157);
+            this.pictureBox.Location = new System.Drawing.Point(430, 132);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(687, 332);
+            this.pictureBox.Size = new System.Drawing.Size(629, 332);
             this.pictureBox.TabIndex = 8;
             this.pictureBox.TabStop = false;
             // 
@@ -147,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 550);
+            this.ClientSize = new System.Drawing.Size(1071, 550);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.backHomeBtn);
             this.Controls.Add(this.showStats);
