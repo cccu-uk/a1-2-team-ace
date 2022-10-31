@@ -66,5 +66,44 @@ namespace QuizzApp
                 MessageBox.Show("PLEASE CHOOSE THEME FOR THE QUIZ!");
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (ChosenTopic == "Movies")
+            {
+                Engine.OpenTwoPlayerForm();
+            }
+            else if (ChosenTopic == "Games")
+            {
+                Engine.OpenTwoPlayerForm();
+            }
+            else if (ChosenTopic == "Music")
+            {
+                Engine.OpenTwoPlayerForm();
+            }
+            else if (ChosenTopic == "Geography")
+            {
+                Engine.OpenTwoPlayerForm();
+            }
+            else if (ChosenTopic == "Maths")
+            {
+                Engine.OpenTwoPlayerForm();
+            }
+            else if (ChosenTopic == "LOTR")
+            {
+                Engine.OpenTwoPlayerForm();
+            }
+            #region
+            //Hidden
+            //else if (ChosenTopic == "LOTR")
+            //{
+            ///Engine.OpenOnePlayerForm();
+            //}
+            #endregion
+            else
+            {
+                MessageBox.Show("PLEASE CHOOSE THEME FOR THE QUIZ!");
+            }
+        }
     }
 }

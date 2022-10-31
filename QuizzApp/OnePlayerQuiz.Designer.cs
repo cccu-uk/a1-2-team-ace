@@ -138,11 +138,12 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(430, 132);
+            this.pictureBox.Location = new System.Drawing.Point(318, 119);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(629, 332);
             this.pictureBox.TabIndex = 8;
             this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // OnePlayerQuiz
             // 

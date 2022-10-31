@@ -363,393 +363,398 @@ namespace QuizzApp
             string chosenTopicTxt = ((Form1)form).ChosenTopic;
             nextQuestion++;
 
-
-            if (chosenTopicTxt == "Movies")
-            {
-                if (nameOfQuestionLbl.Text == "When was the movie 'shawshank redemption' released? ")
+            
+                if (chosenTopicTxt == "Movies")
                 {
-                    if (ansARadioBtn.Checked == true)
+                    if (nameOfQuestionLbl.Text == "When was the movie 'shawshank redemption' released? ")
                     {
-                        Score++;
+                        if (ansARadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        MoviesQuiz(nextQuestion);
                     }
-                    MoviesQuiz(nextQuestion);
+
+                    if (nameOfQuestionLbl.Text == "What's the name of the skyscraper in Die Hard? ")
+                    {
+                        if (ansARadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        MoviesQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "What year was the first Lord of the Rings released? ")
+                    {
+                        if (ansCRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        MoviesQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "Where did Obi-Wan take Luke Skywalker after his birth?")
+                    {
+                        if (ansARadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        MoviesQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "Who killed Vincent Vega, with his own weapon, when he was coming out of the toilet? ")
+                    {
+                        if (ansDRadioBtn.Checked == true)
+                        {
+                            Score++;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
+
+                        }
+                        if (ansARadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansCRadioBtn.Checked == true)
+                        {
+                            Score--;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
+                        }
+                        UnselectRadioBtns();
+                        MoviesQuiz(nextQuestion);
+                    }
                 }
 
-                if (nameOfQuestionLbl.Text == "What's the name of the skyscraper in Die Hard? ")
+                if (chosenTopicTxt == "Games")
                 {
-                    if (ansARadioBtn.Checked == true)
+
+                    if (nameOfQuestionLbl.Text == "When exactly was the first Super Mario Bros. game created?")
                     {
-                        Score++;
+                        if (ansCRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        GamesQuiz(nextQuestion);
                     }
-                    UnselectRadioBtns();
-                    MoviesQuiz(nextQuestion);
+
+                    if (nameOfQuestionLbl.Text == "What is the name of the first FPS game ever created?")
+                    {
+                        if (ansARadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        GamesQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "Which fighting game has the common voice line, 'FINISH HIM/HER'?")
+                    {
+                        if (ansDRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        GamesQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "What does 'GG' stand for?")
+                    {
+                        if (ansCRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        GamesQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "What was Game of the Year in 2018?")
+                    {
+                        if (ansARadioBtn.Checked == true)
+                        {
+                            Score++;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
+
+                        }
+                        if (ansDRadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansCRadioBtn.Checked == true)
+                        {
+                            Score--;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
+                        }
+                        UnselectRadioBtns();
+                        GamesQuiz(nextQuestion);
+
+                    }
                 }
 
-                if (nameOfQuestionLbl.Text == "What year was the first Lord of the Rings released? ")
+                if (chosenTopicTxt == "Music")
                 {
-                    if (ansCRadioBtn.Checked == true)
+                    if (nameOfQuestionLbl.Text == "What is Micheal Jackson's Greatest hit in January 1983?")
                     {
-                        Score++;
+                        if (ansBRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        MusicQuiz(nextQuestion);
                     }
-                    UnselectRadioBtns();
-                    MoviesQuiz(nextQuestion);
+
+                    if (nameOfQuestionLbl.Text == "What is the name of the guitarist than played for Queen?")
+                    {
+                        if (ansDRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        MusicQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "Who sang 'Could you be Loved' that was released June 10 1980?")
+                    {
+                        if (ansARadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        MusicQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "What year did The Rolling Stones form?")
+                    {
+                        if (ansBRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        MusicQuiz(nextQuestion);
+                    }
+
+
+                    if (nameOfQuestionLbl.Text == "Who bought Beats Music in 2014?")
+                    {
+                        if (ansDRadioBtn.Checked == true)
+                        {
+                            Score++;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
+
+                        }
+                        if (ansARadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansCRadioBtn.Checked == true)
+                        {
+                            Score--;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
+                        }
+                        UnselectRadioBtns();
+                        MusicQuiz(nextQuestion);
+                    }
                 }
 
-                if (nameOfQuestionLbl.Text == "Where did Obi-Wan take Luke Skywalker after his birth?")
+                if (chosenTopicTxt == "Geography")
                 {
-                    if (ansARadioBtn.Checked == true)
+                    if (nameOfQuestionLbl.Text == "What is the biggest desert in the world?")
                     {
-                        Score++;
+                        if (ansDRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        GeographyQuiz(nextQuestion);
                     }
-                    UnselectRadioBtns();
-                    MoviesQuiz(nextQuestion);
+
+                    if (nameOfQuestionLbl.Text == "Where is the Burj Khalifa?")
+                    {
+                        if (ansCRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        GeographyQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "What is the biggest continent, in terms of land mass, in the world?")
+                    {
+                        if (ansBRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        GeographyQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "Which country's flag is solid green?")
+                    {
+                        if (ansARadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        GeographyQuiz(nextQuestion);
+                    }
+
+
+                    if (nameOfQuestionLbl.Text == "What is the body of water called that connects the Mediterranean Sea to the Red Sea? ")
+                    {
+                        if (ansDRadioBtn.Checked == true)
+                        {
+                            Score++;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
+
+                        }
+                        if (ansARadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansCRadioBtn.Checked == true)
+                        {
+                            Score--;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
+                        }
+                        UnselectRadioBtns();
+                        GeographyQuiz(nextQuestion);
+                    }
                 }
 
-                if (nameOfQuestionLbl.Text == "Who killed Vincent Vega, with his own weapon, when he was coming out of the toilet? ")
+                if (chosenTopicTxt == "Maths")
                 {
-                    if (ansDRadioBtn.Checked == true)
+                    if (nameOfQuestionLbl.Text == "6 / 2 (1 + 2)")
                     {
-                        Score++;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
-
+                        if (ansBRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        MathsQuiz(nextQuestion);
                     }
-                    if (ansARadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansCRadioBtn.Checked == true)
+
+                    if (nameOfQuestionLbl.Text == "What is the value of Pi?")
                     {
-                        Score--;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
+                        if (ansDRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        MathsQuiz(nextQuestion);
                     }
-                    UnselectRadioBtns();
-                    MoviesQuiz(nextQuestion);
-                }
-            }
 
-            if (chosenTopicTxt == "Games")
-            {
-
-                if (nameOfQuestionLbl.Text == "When exactly was the first Super Mario Bros. game created?")
-                {
-                    if (ansCRadioBtn.Checked == true)
+                    if (nameOfQuestionLbl.Text == "How many Earth hours are in a Earth year?")
                     {
-                        Score++;
+                        if (ansBRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        MathsQuiz(nextQuestion);
                     }
-                    UnselectRadioBtns();
-                    GamesQuiz(nextQuestion);
-                }
 
-                if (nameOfQuestionLbl.Text == "What is the name of the first FPS game ever created?")
-                {
-                    if (ansARadioBtn.Checked == true)
+                    if (nameOfQuestionLbl.Text == "What is the base 10 equivilent for 1 0 0?")
                     {
-                        Score++;
+                        if (ansARadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        MathsQuiz(nextQuestion);
                     }
-                    UnselectRadioBtns();
-                    GamesQuiz(nextQuestion);
-                }
 
-                if (nameOfQuestionLbl.Text == "Which fighting game has the common voice line, 'FINISH HIM/HER'?")
-                {
-                    if (ansDRadioBtn.Checked == true)
+                    if (nameOfQuestionLbl.Text == "What is 6 raised to the power 0?")
                     {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    GamesQuiz(nextQuestion);
-                }
+                        if (ansCRadioBtn.Checked == true)
+                        {
+                            Score++;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
 
-                if (nameOfQuestionLbl.Text == "What does 'GG' stand for?")
-                {
-                    if (ansCRadioBtn.Checked == true)
-                    {
-                        Score++;
+                        }
+                        if (ansARadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansDRadioBtn.Checked == true)
+                        {
+                            Score--;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
+                        }
+                        UnselectRadioBtns();
+                        MathsQuiz(nextQuestion);
                     }
-                    UnselectRadioBtns();
-                    GamesQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "What was Game of the Year in 2018?")
-                {
-                    if (ansARadioBtn.Checked == true)
-                    {
-                        Score++;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
-
-                    }
-                    if (ansDRadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansCRadioBtn.Checked == true)
-                    {
-                        Score--;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
-                    }
-                    UnselectRadioBtns();
-                    GamesQuiz(nextQuestion);
-
-                }
-            }
-
-            if (chosenTopicTxt == "Music")
-            {
-                if (nameOfQuestionLbl.Text == "What is Micheal Jackson's Greatest hit in January 1983?")
-                {
-                    if (ansBRadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    MusicQuiz(nextQuestion);
                 }
 
-                if (nameOfQuestionLbl.Text == "What is the name of the guitarist than played for Queen?")
+                if (chosenTopicTxt == "LOTR")
                 {
-                    if (ansDRadioBtn.Checked == true)
+                    if (nameOfQuestionLbl.Text == "What is the name of the giant spider who tried to eat Frodo?")
                     {
-                        Score++;
+                        if (ansDRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        LOTRQuiz(nextQuestion);
                     }
-                    UnselectRadioBtns();
-                    MusicQuiz(nextQuestion);
+
+                    if (nameOfQuestionLbl.Text == "When Frodo and the other hobbits first meet Aragorn, what name does he use?")
+                    {
+                        if (ansCRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        LOTRQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "Who made the three elven rings?")
+                    {
+                        if (ansARadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        LOTRQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "How many Oscars has the Lord of the Rings franchise won?")
+                    {
+                        if (ansDRadioBtn.Checked == true)
+                        {
+                            Score++;
+                        }
+                        UnselectRadioBtns();
+                        LOTRQuiz(nextQuestion);
+                    }
+
+                    if (nameOfQuestionLbl.Text == "What is Sauron and Gandalf in the Lord of the Rings?")
+                    {
+                        if (ansCRadioBtn.Checked == true)
+                        {
+                            Score++;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
+
+                        }
+                        if (ansARadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansDRadioBtn.Checked == true)
+                        {
+                            Score--;
+                            EndHideBtns();
+                            showStats.Show();
+                            backHomeBtn.Show();
+                        }
+                        UnselectRadioBtns();
+                        LOTRQuiz(nextQuestion);
+                    }
                 }
-
-                if (nameOfQuestionLbl.Text == "Who sang 'Could you be Loved' that was released June 10 1980?")
-                {
-                    if (ansARadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    MusicQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "What year did The Rolling Stones form?")
-                {
-                    if (ansBRadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    MusicQuiz(nextQuestion);
-                }
-
-
-                if (nameOfQuestionLbl.Text == "Who bought Beats Music in 2014?")
-                {
-                    if (ansDRadioBtn.Checked == true)
-                    {
-                        Score++;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
-
-                    }
-                    if (ansARadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansCRadioBtn.Checked == true)
-                    {
-                        Score--;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
-                    }
-                    UnselectRadioBtns();
-                    MusicQuiz(nextQuestion);
-                }
-            }
-                
-            if (chosenTopicTxt == "Geography")
-            {
-                if (nameOfQuestionLbl.Text == "What is the biggest desert in the world?")
-                {
-                    if (ansDRadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    GeographyQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "Where is the Burj Khalifa?")
-                {
-                    if (ansCRadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    GeographyQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "What is the biggest continent, in terms of land mass, in the world?")
-                {
-                    if (ansBRadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    GeographyQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "Which country's flag is solid green?")
-                {
-                    if (ansARadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    GeographyQuiz(nextQuestion);
-                }
-
-
-                if (nameOfQuestionLbl.Text == "What is the body of water called that connects the Mediterranean Sea to the Red Sea? ")
-                {
-                    if (ansDRadioBtn.Checked == true)
-                    {
-                        Score++;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
-
-                    }
-                    if (ansARadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansCRadioBtn.Checked == true)
-                    {
-                        Score--;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
-                    }
-                    UnselectRadioBtns();
-                    GeographyQuiz(nextQuestion);
-                }
-            }
-                
-            if (chosenTopicTxt == "Maths")
-            {
-                if (nameOfQuestionLbl.Text == "6 / 2 (1 + 2)")
-                {
-                    if (ansBRadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    MathsQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "What is the value of Pi?")
-                {
-                    if (ansDRadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    MathsQuiz(nextQuestion);
-                }
-                
-                if (nameOfQuestionLbl.Text == "How many Earth hours are in a Earth year?")
-                {
-                    if (ansBRadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    MathsQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "What is the base 10 equivilent for 1 0 0?")
-                {
-                    if (ansARadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    MathsQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "What is 6 raised to the power 0?")
-                {
-                    if (ansCRadioBtn.Checked == true)
-                    {
-                        Score++;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
-
-                    }
-                    if (ansARadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansDRadioBtn.Checked == true)
-                    {
-                        Score--;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
-                    }
-                    UnselectRadioBtns();
-                    MathsQuiz(nextQuestion);
-                }
-            }
-
-            if (chosenTopicTxt == "LOTR")
-            {
-                if (nameOfQuestionLbl.Text == "What is the name of the giant spider who tried to eat Frodo?")
-                {
-                    if (ansDRadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    LOTRQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "When Frodo and the other hobbits first meet Aragorn, what name does he use?")
-                {
-                    if (ansCRadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    LOTRQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "Who made the three elven rings?")
-                {
-                    if (ansARadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    LOTRQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "How many Oscars has the Lord of the Rings franchise won?")
-                {
-                    if (ansDRadioBtn.Checked == true)
-                    {
-                        Score++;
-                    }
-                    UnselectRadioBtns();
-                    LOTRQuiz(nextQuestion);
-                }
-
-                if (nameOfQuestionLbl.Text == "What is Sauron and Gandalf in the Lord of the Rings?")
-                {
-                    if (ansCRadioBtn.Checked == true)
-                    {
-                        Score++;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
-
-                    }
-                    if (ansARadioBtn.Checked == true || ansBRadioBtn.Checked == true || ansDRadioBtn.Checked == true)
-                    {
-                        Score--;
-                        EndHideBtns();
-                        showStats.Show();
-                        backHomeBtn.Show();
-                    }
-                    UnselectRadioBtns();
-                    LOTRQuiz(nextQuestion);
-                }
-            }
+            
+            //else if(ansARadioBtn.Checked == false && ansBRadioBtn.Checked == false && ansCRadioBtn.Checked == false && ansDRadioBtn.Checked == false)
+            //{
+                //MessageBox.Show("Please Select An Answer");
+            //}
 
         }
 
@@ -761,6 +766,11 @@ namespace QuizzApp
         private void backHomeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,6 +16,16 @@ namespace QuizzApp
             OnePlayerQuiz onePlayerQuiz = new OnePlayerQuiz();
             onePlayerQuiz.Closed += (s, args) => form1.Close();
             onePlayerQuiz.Show();
+
+            
+        }
+        public static void OpenTwoPlayerForm() 
+        {
+            Form1 form2 = new Form1();
+            form2.Hide();
+            TwoPlayerQuiz twoPlayerQuiz = new TwoPlayerQuiz();
+            twoPlayerQuiz.Closed += (s, args) => form2.Close();
+            twoPlayerQuiz.Show();
         }
         public static Engine Instance
         {
