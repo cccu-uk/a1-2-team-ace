@@ -156,6 +156,7 @@
             this.Controls.Add(this.nameOfQuestionLbl);
             this.Name = "TwoPlayerQuiz";
             this.Text = "TwoPlayerQuiz";
+            this.Load += new System.EventHandler(this.TwoPlayerQuiz_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

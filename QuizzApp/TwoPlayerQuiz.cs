@@ -774,5 +774,10 @@ namespace QuizzApp
         {
             this.Close();
         }
+
+        private void TwoPlayerQuiz_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
